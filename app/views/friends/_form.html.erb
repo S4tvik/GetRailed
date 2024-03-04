@@ -10,28 +10,32 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :first_name, style: "display: block" %>
-    <%= form.text_field :first_name %>
+ <div class="container">
+  <div class="mb-2 form-group">
+    <%= form.label :first_name, style: "display: block",class: "form-label" %>
+    <%= form.text_field :first_name ,class: "form-control"%>
   </div>
 
-  <div>
-    <%= form.label :last_name, style: "display: block" %>
-    <%= form.text_field :last_name %>
+  <div class="mb-2">
+    <%= form.label :last_name, style: "display: block" ,class: "form-label"%>
+    <%= form.text_field :last_name ,class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
+  <div class="mb-2">
+    <%= form.label :email, style: "display: block" ,class: "form-label"%>
+    <%= form.text_field :email ,class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.label :phone, style: "display: block" %>
-    <%= form.text_field :phone %>
+  <div class="mb-5">
+    <%= form.label :phone, style: "display: block" ,class: "form-label"%>
+    <%= form.text_field :phone ,class: "form-control"%>
+  </div>
+  <div class="mb-5">
+    <%= form.number_field :user_id ,id: :frined_user_id,class: "form-control",value: current_user.id,type: :hidden %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="mb-5">
+    <%= form.submit class: "btn btn-primary" %>
   </div>
+  <div>
 <% end %>
